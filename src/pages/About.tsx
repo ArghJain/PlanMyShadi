@@ -11,30 +11,38 @@ const About = () => {
     { number: "99%", label: "Satisfaction Rate", icon: Award }
   ];
 
-  const team = [
+  // const team = [
+  //   {
+  //     name: "Priya Sharma",
+  //     role: "Co-Founder & CEO",
+  //     image: "/placeholder.svg",
+  //     description: "Former wedding planner with 10+ years of experience in luxury weddings."
+  //   },
+  //   {
+  //     name: "Rahul Patel",
+  //     role: "Co-Founder & CTO",
+  //     image: "/placeholder.svg",
+  //     description: "Tech entrepreneur passionate about solving real-world problems through technology."
+  //   },
+  //   {
+  //     name: "Anjali Gupta",
+  //     role: "Head of Vendor Relations",
+  //     image: "/placeholder.svg",
+  //     description: "Expert in vendor management with extensive network across India."
+  //   },
+  //   {
+  //     name: "Vikram Singh",
+  //     role: "Head of Product",
+  //     image: "/placeholder.svg",
+  //     description: "Product strategist focused on creating delightful user experiences."
+  //   }
+  // ];
+
+   const team = [
     {
-      name: "Priya Sharma",
-      role: "Co-Founder & CEO",
-      image: "/placeholder.svg",
-      description: "Former wedding planner with 10+ years of experience in luxury weddings."
-    },
-    {
-      name: "Rahul Patel",
-      role: "Co-Founder & CTO",
-      image: "/placeholder.svg",
-      description: "Tech entrepreneur passionate about solving real-world problems through technology."
-    },
-    {
-      name: "Anjali Gupta",
-      role: "Head of Vendor Relations",
-      image: "/placeholder.svg",
-      description: "Expert in vendor management with extensive network across India."
-    },
-    {
-      name: "Vikram Singh",
-      role: "Head of Product",
-      image: "/placeholder.svg",
-      description: "Product strategist focused on creating delightful user experiences."
+      name: "Argh Jain",
+      image: "/pic.JPG",
+      description: "Tech entrepreneur passionate about solving real-world problems through technology.",
     }
   ];
 
@@ -131,6 +139,7 @@ const About = () => {
         </section>
 
         {/* Team Section */}
+        {/*
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -153,6 +162,36 @@ const About = () => {
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                     <p className="text-rose-600 font-medium mb-3">{member.role}</p>
+                    <p className="text-gray-600 text-sm">{member.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        */}
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                <p className="text-xl text-gray-600">
+                  The passionate people behind PlanMyShadi who work tirelessly to make your wedding dreams come true.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {team.map((member, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                     <p className="text-gray-600 text-sm">{member.description}</p>
                   </div>
                 ))}
